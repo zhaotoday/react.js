@@ -1,0 +1,10 @@
+@import "./iconfont.css";
+
+body {
+  background-color: #f3f3f3;
+  font-size: 14px;
+}
+
+:global .ant-breadcrumb {
+  margin-bottom: 15px;
+}
