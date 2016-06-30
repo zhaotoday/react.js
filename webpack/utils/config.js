@@ -13,11 +13,20 @@ const config = {
       {
         test: /\.(png|jpg|gif)$/,
         loader: 'url?limit=8192&name=images/[hash].[ext]'
+      },
+      {
+        test: /\.(eot|svg|ttf|woff)$/,
+        loader: 'file?name=fonts/[hash].[ext]'
+      },
+      {
+        test: /\.scss$/,
+        include: /src/,
+        loader: 'style!css!sass!postcss'
       }
     ]
   },
   postcss: [
-    require('postcss-font-magician'),
+    require('postcss-font-magician')(),
     require('cssnano')({
       filterPlugins: false,
       sourcemap: true,
@@ -43,7 +52,11 @@ const config = {
   resolve: {
     root: path.resolve(),
     modulesDirectories: ['src', 'node_modules'],
-    extensions: ['', '.js', '.jsx', '.html', '.css', '.scss']
+    extensions: ['', '.js', '.jsx', '.html', '.css', '.scss'],
+    alias: {
+      'react': 'react-lite',
+      'react-dom': 'react-lite'
+    }
   }
 }
 

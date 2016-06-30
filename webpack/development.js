@@ -28,7 +28,7 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        exclude: /node_modules/,
+        include: /src/,
         loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]!sass!postcss'
       },
       {
