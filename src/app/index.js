@@ -1,7 +1,7 @@
 import React from 'react'
 import actionCreators from '../redux/actions'
 
-import { connect } from 'react-redux'
+import connect from 'react-redux/lib/components/connect'
 import { Head, Body, Sidebar, Main } from 'app/layout'
 
 @connect(
