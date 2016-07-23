@@ -20,10 +20,13 @@ const config = {
       },
       {
         test: /\.scss$/,
-        include: /src/,
+        include: [path.resolve('src/themes')],
         loader: 'style!css!sass!postcss'
       }
     ]
+  },
+  sassLoader: {
+    includePaths: ['src']
   },
   postcss: [
     require('postcss-font-magician')(),

@@ -27,8 +27,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        include: /src/,
+        test: /\.scss$/,
+        include: [
+          path.resolve('src/app'),
+          path.resolve('src/components')
+        ],
         loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]!sass!postcss'
       },
       {
@@ -39,6 +42,7 @@ module.exports = {
       ...config.module.loaders
     ]
   },
+  sassLoader: config.sassLoader,
   postcss: function () {
     return [
       require('postcss-browser-reporter'),
