@@ -60,7 +60,6 @@
     "postcss-font-magician": "^1.4.0",
     "postcss-loader": "^0.9.1",
     "postcss-reporter": "^1.4.1",
-    "postcss-url": "^5.1.2",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
