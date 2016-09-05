@@ -9,7 +9,7 @@ module.exports = function (config) {
     ],
     exclude: [],
     preprocessors: {
-      'specs/**/*.spec.js': ['webpack']
+      'specs/**/*.spec.js': ['webpack', 'sourcemap']
     },
     reporters: ['mocha', 'coverage'],
     webpackServer: {
@@ -31,7 +31,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false,
+    singleRun: true,
     coverageReporter: {
       reporters: [
         {type: 'lcov', dir: 'coverage', subdir: '.'},
