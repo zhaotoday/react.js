@@ -5,6 +5,6 @@ export default class extends REST {
     super()
     this.baseURL = consts.API_URL
     this.version = 'v1.0'
-    this.path = '/article'
+    this.paths = ['articles']
   }
 }
