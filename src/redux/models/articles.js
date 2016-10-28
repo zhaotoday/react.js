@@ -6,5 +6,8 @@ export default class extends REST {
     this.baseURL = consts.API_URL
     this.version = 'v1.0'
     this.paths = ['articles']
+    this.headers = {
+      Authorization: 'abc'
+    }
   }
 }

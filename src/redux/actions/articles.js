@@ -2,13 +2,29 @@ import actionTypes from '../consts/articles'
 import Model from '../models/articles'
 import createAction from 'redux-actions/lib/createAction'
 
-export const postArticle = createAction(
-  actionTypes.POST_ARTICLE,
+/**
+ * 获取文章列表
+ */
+export const getArticles = createAction(
+  actionTypes.GET_ARTICLES,
   (options) => {
     return new Model()
-      .addPaths(['{category}', 'news'])
+      .GET({
+        params: options.params
+      })
+  }
+)
+
+/**
+ * 给文章新增一个作者
+ */
+export const postArticleAuthor = createAction(
+  actionTypes.POST_ARTICLE_AUTHOR,
+  (options) => {
+    return new Model()
+      .addPaths(['{article_id}/authors'])
       .replace({
-        category: 123
+        article_id: options.article_id
       })
       .POST({
         data: options.data

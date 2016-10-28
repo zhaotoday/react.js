@@ -1,8 +1,8 @@
-import actionTypes from '../consts/article'
+import actionTypes from '../consts/articles'
 import typeToReducer from 'type-to-reducer'
 
 export default typeToReducer({
-  [`${actionTypes.POST_ARTICLE}`]: {
+  [`${actionTypes.GET_ARTICLES}`]: {
     LOADING: () => ({}),
     ERROR: (state, action) => ({
       isRejected: true,
@@ -10,7 +10,7 @@ export default typeToReducer({
     }),
     SUCCESS: (state, action) => ({
       isFulfilled: true,
-      data: action.payload
+      data: action.payload.data
     })
   }
 }, {})

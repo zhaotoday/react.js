@@ -10,12 +10,20 @@ import 'themes/global'
     articles: state.articles
   }),
   dispatch => ({
-    postArticle: (options) => dispatch(actionCreators.postArticle(options))
+    getArticles: (options) => dispatch(actionCreators.getArticles(options)),
+    postArticleAuthor: (options) => dispatch(actionCreators.postArticleAuthor(options))
   })
 )
 class Comp extends React.Component {
   componentDidMount() {
-    this.props.postArticle({
+    this.props.getArticles({
+      params: {
+        title: 'the title'
+      }
+    })
+
+    this.props.postArticleAuthor({
+      article_id: 123,
       data: {
         title: 'the title'
       }
