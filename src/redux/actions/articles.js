@@ -22,7 +22,7 @@ export const postArticleAuthor = createAction(
   actionTypes.POST_ARTICLE_AUTHOR,
   (options) => {
     return new Model()
-      .addPaths(['{article_id}/authors'])
+      .addPath('{article_id}/authors')
       .replace({
         article_id: options.article_id
       })

@@ -18,7 +18,7 @@ export default class REST {
     // 接口版本
     this.version = ''
     // 请求路劲
-    this.paths = []
+    this.path = ''
     // headers
     this.headers = {}
   }
@@ -30,7 +30,7 @@ export default class REST {
    * @return {object}
    */
   _request(method = 'GET', options = {}) {
-    let url = this.version ? `/${this.version}/${this.paths.join('/')}` : this.paths.join('/')
+    let url = this.version ? `/${this.version}/${this.path}` : `/${this.path}`
     const headers = Object.keys(this.headers) ? {headers: this.headers} : {}
 
     // GET
@@ -64,10 +64,10 @@ export default class REST {
 
   /**
    * 附加路劲
-   * @param {array} paths - 路劲
+   * @param {string} path - 路劲
    */
-  addPaths(paths = []) {
-    this.paths = this.paths.concat(paths)
+  addPath(path = '') {
+    this.path = this.path + path
 
     return this
   }
@@ -90,10 +90,8 @@ export default class REST {
    * @param {object} options - path 参数列表
    */
   replace(options = {}) {
-    Object.keys(options).forEach((optionKey) => {
-      this.paths = this.paths.map((pathItem) => {
-        return pathItem.replace(new RegExp('{' + optionKey + '}', 'img'), options[optionKey])
-      })
+    Object.keys(options).forEach((key) => {
+      this.path = this.path.replace(new RegExp('{' + key + '}', 'img'), options[key])
     })
 
     return this
