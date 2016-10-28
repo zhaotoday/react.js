@@ -7,7 +7,7 @@ import 'themes/global'
 
 @connect(
   state => ({
-    article: state.article
+    articles: state.articles
   }),
   dispatch => ({
     postArticle: (options) => dispatch(actionCreators.postArticle(options))

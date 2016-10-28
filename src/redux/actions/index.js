@@ -1,4 +1,4 @@
-import * as articleActions from './article'
+import * as articleActions from './articles'
 
 export default {
   ...articleActions

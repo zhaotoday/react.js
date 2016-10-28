@@ -2,7 +2,7 @@ import actionTypes from '../consts/article'
 import typeToReducer from 'type-to-reducer'
 
 export default typeToReducer({
-  [`${actionTypes.ADD_ARTICLE}`]: {
+  [`${actionTypes.POST_ARTICLE}`]: {
     LOADING: () => ({}),
     ERROR: (state, action) => ({
       isRejected: true,

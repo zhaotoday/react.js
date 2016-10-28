@@ -1,5 +1,5 @@
-import actionTypes from '../consts/article'
-import Model from '../models/article'
+import actionTypes from '../consts/articles'
+import Model from '../models/articles'
 import createAction from 'redux-actions/lib/createAction'
 
 export const postArticle = createAction(
