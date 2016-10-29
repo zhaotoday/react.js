@@ -3,8 +3,9 @@ em {
 }
 
 body {
+  overflow: hidden;
+  font-family: Microsoft YaHei;
   font-size: 16px !important;
-  background-color: #f5f5f5;
 }
 
 [data-dpr="2"] body {

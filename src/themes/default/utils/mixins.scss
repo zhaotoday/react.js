@@ -1,4 +1,12 @@
-@mixin center-block {
+/* 设置块居中 */
+@mixin block-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* 设置背景图片尺寸 */
+@mixin image-size($width, $height) {
+  width: $width;
+  height: $height;
+  background-size: $width $height;
 }
