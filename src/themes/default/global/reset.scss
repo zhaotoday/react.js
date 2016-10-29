@@ -1,3 +1,16 @@
 em {
   font-style: normal;
 }
+
+body {
+  font-size: 16px !important;
+  background-color: #f5f5f5;
+}
+
+[data-dpr="2"] body {
+  font-size: 32px !important;
+}
+
+[data-dpr="3"] body {
+  font-size: 48px !important;
+}
