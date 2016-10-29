@@ -1,0 +1,55 @@
+@import "themes/utils";
+
+.header {
+  background-image: url("../images/bg.png");
+  @include image-size(100%, px2rem(530px));
+
+  .overlay {
+    width: 100%;
+    height: px2rem(132px);
+    background-color: rgba(0, 0, 0, .2);
+
+    h1 {
+      position: relative;
+      top: px2rem(75px);
+      line-height: px2rem(30px);
+      text-align: center;
+      color: white;
+
+      .left,
+      .right {
+        @include image-size(px2rem(30px), px2rem(30px));
+      }
+
+      .left {
+        background-image: url("../images/left.png");
+        float: left;
+        margin-left: px2rem(30px);
+      }
+
+      .right {
+        background-image: url("../images/right.png");
+        float: right;
+        margin-right: px2rem(30px);
+      }
+    }
+  }
+
+  .logo {
+    @include block-center;
+    margin-top: px2rem(83px);
+    background-image: url("../images/logo.png");
+    @include image-size(px2rem(322px), px2rem(93px));
+  }
+
+  .download {
+    @include block-center;
+    background-image: url("../images/download.png");
+    @include image-size(px2rem(214px), px2rem(81px));
+    margin-top: px2rem(30px);
+
+    &:active {
+      background-image: url("../images/download-on.png");
+    }
+  }
+}

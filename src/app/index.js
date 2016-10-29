@@ -31,15 +31,7 @@ class Comp extends React.Component {
   }
 
   render() {
-    return <div>
-      <Head />
-      <Body>
-        <Sidebar ref="sidebar" />
-        <Main>
-          {this.props.children}
-        </Main>
-      </Body>
-    </div>
+    return <div>{this.props.children}</div>
   }
 }
 
