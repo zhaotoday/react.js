@@ -17,7 +17,7 @@
       list-style: none;
     }
 
-    .bgs {
+    .wrap {
       width: 100%;
       min-width: 1450px;
     }
@@ -61,21 +61,23 @@
     }
 
     .bg1 .logo {
-      background-image: url("themes/default/images/logo.png");
+      background-image: url("themes/default/images/sprite.png");
       width: 474px;
       height: 137px;
     }
 
     .qrcode {
       float: left;
-      background-image: url("themes/default/images/qrcode.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: -576px -156px;
       width: 180px;
       height: 180px;
     }
 
     .arrow-down {
       cursor: pointer;
-      background-image: url("themes/default/images/arrows/down.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: -581px -46px;
       width: 36px;
       height: 22px;
       margin: 35px auto 30px auto;
@@ -93,21 +95,24 @@
     }
 
     .android {
-      background-image: url("themes/default/images/btns/android.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: 0 -156px;
       margin: 8px auto 35px auto;
     }
 
     .android:hover {
-      background-image: url("themes/default/images/btns/android-on.png");
-
+      background-image: url("themes/default/images/sprite.png");
+      background-position: 0 -243px;
     }
 
     .iphone {
-      background-image: url("themes/default/images/btns/iphone.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: -288px -156px;
     }
 
     .iphone:hover {
-      background-image: url("themes/default/images/btns/iphone-on.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: -288px -243px;
     }
 
     .download-tip {
@@ -138,7 +143,8 @@
       position: absolute;
       left: 12px;
       top: 6px;
-      background-image: url("themes/default/images/bottom-logo.png");
+      background-image: url("themes/default/images/sprite.png");
+      background-position: -582px 0;
       width: 173px;
       height: 29px;
 
@@ -146,31 +152,33 @@
   </style>
 </head>
 <body>
-<ol class="bgs">
-  <li class="bg1">
-    <div class="btns">
-      <div class="logo"></div>
-      <div class="arrow-down"></div>
-      <div class="qrcode"></div>
-      <div class="download">
-        <a class="android" href="#"></a>
-        <a class="iphone" href="#"></a>
+<div class="wrap">
+  <ol class="bgs">
+    <li class="bg1">
+      <div class="btns">
+        <div class="logo"></div>
+        <div class="arrow-down"></div>
+        <div class="qrcode"></div>
+        <div class="download">
+          <a class="android" href="#"></a>
+          <a class="iphone" href="#"></a>
+        </div>
+        <p class="download-tip">
+          扫二维码下载，或选择合适的手机系统下载
+        </p>
       </div>
-      <p class="download-tip">
-        扫二维码下载，或选择合适的手机系统下载
-      </p>
-    </div>
-  </li>
-  <li class="bg2"></li>
-  <li class="bg3"></li>
-  <li class="bg4"></li>
-  <li class="bg5"></li>
-</ol>
-<div class="footer">
-  福建虎翼网络科技有限公司 | 闽ICP备16028144号-1
-</div>
-<div class="bottom">
-  <div class="logo"></div>
+    </li>
+    <li class="bg2"></li>
+    <li class="bg3"></li>
+    <li class="bg4"></li>
+    <li class="bg5"></li>
+  </ol>
+  <div class="footer">
+    福建虎翼网络科技有限公司 | 闽ICP备16028144号-1
+  </div>
+  <div class="bottom">
+    <div class="logo"></div>
+  </div>
 </div>
 </body>
 </html>
