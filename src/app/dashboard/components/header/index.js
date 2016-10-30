@@ -8,24 +8,24 @@ export default class extends React.Component {
       <div className={styles.overlay}>
         <h1 className="f1">
           <Hammer onTap={this._handleTapLeft}>
-            <div className={styles.left}></div>
+            <div className={styles.left} />
           </Hammer>
           赢球大师
           <Hammer onTap={this._handleTapRight}>
-            <div className={styles.right}></div>
+            <div className={styles.right} />
           </Hammer>
         </h1>
       </div>
-      <div className={styles.logo}></div>
-      <a className={styles.download} href="#"></a>
+      <div className={styles.logo} />
+      <a className={styles.download} href="#" />
     </header>
   }
 
   _handleTapLeft() {
-    alert('left')
+    console.log('tap left')
   }
 
   _handleTapRight() {
-    alert('right')
+    console.log('tap right')
   }
 }

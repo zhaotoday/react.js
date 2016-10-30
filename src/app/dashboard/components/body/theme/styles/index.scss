@@ -17,7 +17,7 @@
       margin: px2rem(7px);
       background-image: url("../images/index.png");
       @include image-size(px2rem(14px), px2rem(15px));
-      
+
       &.on {
         background-image: url("../images/index-on.png");
       }

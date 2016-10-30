@@ -29,7 +29,7 @@ export default class extends React.Component {
         <ol>
           {
             [0, 1, 2, 3].map((item) => {
-              return <li className={item === this.state.swipeIndex ? styles.on : ''}></li>
+              return <li className={item === this.state.swipeIndex ? styles.on : ''} />
             })
           }
         </ol>
