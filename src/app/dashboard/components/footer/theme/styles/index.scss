@@ -1,0 +1,23 @@
+@import "themes/utils";
+
+.footer {
+  .icp {
+    background-color: #ffbc01;
+    text-align: center;
+    height: px2rem(110px);
+    line-height: px2rem(110px);
+  }
+
+  .logo {
+    height: px2rem(40px);
+    background-color: #282828;
+    
+    p {
+      position: relative;
+      background-image: url("../images/logo.png");
+      @include image-size(px2rem(173px), px2rem(29px));
+      top: px2rem(8px);
+      left: px2rem(10px);
+    }
+  }
+}
