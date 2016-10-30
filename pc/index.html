@@ -5,7 +5,7 @@
   <title>赢球大师</title>
   <style>
     body {
-      font-family: "黑体";
+      font-family: Microsoft YaHei;
     }
 
     * {
@@ -60,15 +60,24 @@
       position: relative;
     }
 
-    .bg1 .logo {
+    .bg1 .logo,
+    .qrcode,
+    .arrow-down,
+    .android,
+    .iphone,
+    .android:hover,
+    .iphone:hover,
+    .bottom .logo {
       background-image: url("themes/default/images/sprite.png");
+    }
+
+    .bg1 .logo {
       width: 474px;
       height: 137px;
     }
 
     .qrcode {
       float: left;
-      background-image: url("themes/default/images/sprite.png");
       background-position: -576px -156px;
       width: 180px;
       height: 180px;
@@ -76,7 +85,6 @@
 
     .arrow-down {
       cursor: pointer;
-      background-image: url("themes/default/images/sprite.png");
       background-position: -581px -46px;
       width: 36px;
       height: 22px;
@@ -95,23 +103,19 @@
     }
 
     .android {
-      background-image: url("themes/default/images/sprite.png");
       background-position: 0 -156px;
       margin: 8px auto 35px auto;
     }
 
     .android:hover {
-      background-image: url("themes/default/images/sprite.png");
       background-position: 0 -243px;
     }
 
     .iphone {
-      background-image: url("themes/default/images/sprite.png");
       background-position: -288px -156px;
     }
 
     .iphone:hover {
-      background-image: url("themes/default/images/sprite.png");
       background-position: -288px -243px;
     }
 
@@ -143,7 +147,6 @@
       position: absolute;
       left: 12px;
       top: 6px;
-      background-image: url("themes/default/images/sprite.png");
       background-position: -582px 0;
       width: 173px;
       height: 29px;
