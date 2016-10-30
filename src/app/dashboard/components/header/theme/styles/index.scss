@@ -11,14 +11,18 @@
 
     h1 {
       position: relative;
-      top: px2rem(75px);
+      top: px2rem(65px);
       text-align: center;
-      line-height: px2rem(30px);
+      line-height: px2rem(50px);
       color: white;
 
       .left,
       .right {
-        @include image-size(px2rem(30px), px2rem(30px));
+        width: px2rem(50px);
+        height: px2rem(50px);
+        background-size: px2rem(30px), px2rem(30px);
+        background-position: px2rem(10px) px2rem(10px);
+        background-repeat: no-repeat;
       }
 
       .left {
@@ -43,6 +47,7 @@
   }
 
   .download {
+    display: block;
     @include block-center;
     background-image: url("../images/download.png");
     @include image-size(px2rem(214px), px2rem(81px));
