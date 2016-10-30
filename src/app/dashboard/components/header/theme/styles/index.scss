@@ -1,7 +1,7 @@
 @import "themes/utils";
 
 .header {
-  background-image: url("../images/bg.png");
+  background-image: url("../images/bg.jpg");
   @include image-size(100%, px2rem(530px));
 
   .overlay {
