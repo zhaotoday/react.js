@@ -22,6 +22,10 @@ const config = {
         test: /\.scss$/,
         include: [path.resolve('src/themes')],
         loader: 'style!css!sass!postcss'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },

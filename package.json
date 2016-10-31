@@ -91,6 +91,8 @@
     "axios": "^0.15.2",
     "fbjs": "^0.8.5",
     "history": "^4.3.0",
+    "i18next": "^3.4.4",
+    "json-loader": "^0.5.4",
     "preact": "^6.3.0",
     "preact-compat": "^3.9.0",
     "react": "^15.3.2",
