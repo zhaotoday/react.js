@@ -31,15 +31,16 @@ export default class I18N {
 
   /**
    * 添加语言资源
-   * @param module {string} 业务模块
+   * @param ns {string} 业务模块
    * @param req {function} 语言资源
    */
-  addResources = (module, req) => {
+  addResources = (ns, req) => {
+    ns = ns || this.ns
+
     req.keys().forEach((path) => {
       const resources = req(path)
       const paths = path.split('/')
       const lng = paths[1]
-      const ns = module || this.ns
 
       i18next.addResourceBundle(lng, ns, resources, true, true)
     })
@@ -67,9 +68,9 @@ export default class I18N {
 
   /**
    * 获取翻译
-   * @param module {string} 业务模块
+   * @param ns {string} 业务模块
    */
-  getT(module) {
-    return i18next.getFixedT(this.lng, module || this.ns)
+  getT(ns) {
+    return i18next.getFixedT(this.lng, ns || this.ns)
   }
 }
