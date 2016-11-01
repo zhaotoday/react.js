@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+require_once 'Mobile_Detect.php';
+
+$detect = new Mobile_Detect;
+
+if ($detect->isMobile()) {
+  header('Location: http://m.furuan.cn/');
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
