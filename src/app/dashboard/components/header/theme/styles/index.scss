@@ -2,7 +2,7 @@
 
 .header {
   box-sizing: border-box;
-  background-image: url("../images/bg.jpg");
+  background-image: url("../images/bg.png");
   @include image-size(100%, px2rem(530px));
   padding-top: px2rem(215px);
 
