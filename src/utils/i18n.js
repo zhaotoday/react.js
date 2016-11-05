@@ -8,6 +8,7 @@ import i18next from 'i18next'
 export default class I18N {
   /**
    * 构造函数
+   * @param lng {string} 默认语言
    */
   constructor(lng) {
     this.lng = lng || this.getBrowserLng()
@@ -16,7 +17,6 @@ export default class I18N {
 
   /**
    * 初始化
-   * @param req {function} 语言资源
    */
   init() {
     i18next.init({
