@@ -54,7 +54,7 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-react": "^6.4.1",
     "eslint-plugin-standard": "^2.0.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.0",
     "istanbul-instrumenter-loader": "^1.0.0",
@@ -83,7 +83,7 @@
     "stylelint": "^7.5.0",
     "stylelint-config-standard": "^14.0.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
+    "webpack": "^2.1.0-beta.28",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.16.2"
   },

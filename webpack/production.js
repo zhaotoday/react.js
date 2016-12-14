@@ -15,34 +15,53 @@ module.exports = {
     filename: '[id].[chunkhash].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.scss$/,
         include: [
           path.resolve('src/app'),
           path.resolve('src/components')
         ],
-        loader: 'style!css?modules&localIdentName=[hash:base64:5]!sass!postcss'
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              localIdentName: '[hash:base64:5]'
+            }
+          },
+          'sass-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.css$/,
         include: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', 'css')
+        use: [
+          {
+            loader: ExtractTextPlugin.extract({
+              fallbackLoader: 'style-loader',
+              loader: [{
+                loader: 'css-loader'
+              }]
+            })
+          }
+        ]
       },
-      ...config.module.loaders
+      ...config.module.rules
     ]
   },
-  sassLoader: config.sassLoader,
-  postcss: function () {
-    return config.postcss
-  },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
-    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.bundle.js'
+    }),
     new UglifyJsPlugin({
       compress: {
         warnings: false
-      }
+      },
+      sourceMap: false
     }),
     new ExtractTextPlugin('[name].css'),
     ...config.plugins
