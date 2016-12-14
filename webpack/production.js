@@ -39,14 +39,10 @@ module.exports = {
         test: /\.css$/,
         include: /node_modules/,
         use: [
-          {
-            loader: ExtractTextPlugin.extract({
-              fallbackLoader: 'style-loader',
-              loader: [{
-                loader: 'css-loader'
-              }]
-            })
-          }
+          ExtractTextPlugin.extract({
+            fallbackLoader: 'style-loader',
+            loader: ['css-loader']
+          })
         ]
       },
       ...config.module.rules
