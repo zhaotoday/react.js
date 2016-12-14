@@ -16,7 +16,7 @@ const config = {
         use: [
           {
             loader: 'url-loader',
-            query: {
+            options: {
               limit: 8192,
               name: 'images/[hash].[ext]'
             }
@@ -28,7 +28,7 @@ const config = {
         use: [
           {
             loader: 'file-loader',
-            query: {
+            options: {
               name: 'fonts/[hash].[ext]'
             }
           }
