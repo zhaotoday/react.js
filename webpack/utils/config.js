@@ -50,22 +50,6 @@ const config = {
       }
     ]
   },
-  postcss: [
-    require('postcss-font-magician')(),
-    require('cssnano')({
-      filterPlugins: false,
-      sourcemap: true,
-      autoprefixer: {
-        add: true,
-        remove: true,
-        browsers: ['last 2 versions']
-      },
-      safe: true,
-      discardComments: {
-        removeAll: true
-      }
-    })
-  ],
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -90,7 +74,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: consts.TEMPLATE,
       title: consts.TITLE,
-      filename: '../index.html',
+      filename: './index.html',
       hash: true
     })
   ],

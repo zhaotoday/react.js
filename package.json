@@ -16,7 +16,7 @@
       "command": "karma start ./test/unit/karma.conf.js"
     },
     "start": {
-      "command": "webpack-dev-server --config webpack --hot --inline --progress --colors",
+      "command": "webpack-dev-server --config webpack --colors",
       "env": {
         "NODE_ENV": "development"
       }
@@ -85,7 +85,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.28",
     "webpack-dev-middleware": "^1.8.4",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^2.1.0-beta.12"
   },
   "dependencies": {
     "axios": "^0.15.2",

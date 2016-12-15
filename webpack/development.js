@@ -10,44 +10,45 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true,
     contentBase: consts.SRC,
     port: consts.PORT
   },
-  entry: [
-    'webpack-dev-server/client?http://localhost:81',
-    'webpack/hot/only-dev-server',
-    path.resolve(consts.ENTRY)
-  ],
+  entry: path.resolve(consts.ENTRY),
   output: {
     path: path.resolve(consts.DIST),
     publicPath: '/',
     filename: '[id].[hash].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.scss$/,
         include: [
           path.resolve('src/app'),
           path.resolve('src/components')
         ],
-        loader: 'style!css?modules&localIdentName=[name]__[local]-[hash:base64:5]!sass!postcss'
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]__[local]-[hash:base64:5]'
+            }
+          },
+          'sass-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.css$/,
         include: /node_modules/,
-        loader: 'style!css'
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
       },
-      ...config.module.loaders
-    ]
-  },
-  sassLoader: config.sassLoader,
-  postcss: function () {
-    return [
-      require('postcss-browser-reporter'),
-      require('postcss-reporter'),
-      ...config.postcss
+      ...config.module.rules
     ]
   },
   plugins: [
