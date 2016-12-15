@@ -4,6 +4,9 @@ const consts = require('./consts')
 const path = require('path')
 
 const config = {
+  performance: {
+    hints: false
+  },
   module: {
     rules: [
       {

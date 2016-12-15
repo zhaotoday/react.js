@@ -19,6 +19,7 @@ module.exports = {
     publicPath: '/',
     filename: '[id].[hash].js'
   },
+  performance: config.performance,
   module: {
     rules: [
       {

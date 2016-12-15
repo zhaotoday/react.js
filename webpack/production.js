@@ -14,6 +14,7 @@ module.exports = {
     publicPath: consts.CDN,
     filename: '[id].[chunkhash].js'
   },
+  performance: config.performance,
   module: {
     rules: [
       {
