@@ -16,13 +16,13 @@
       "command": "karma start ./test/unit/karma.conf.js"
     },
     "start": {
-      "command": "webpack-dev-server --config webpack --colors",
+      "command": "webpack-dev-server --config build --colors",
       "env": {
         "NODE_ENV": "development"
       }
     },
     "build": {
-      "command": "npm run clean && webpack -p --config webpack --define process.env.NODE_ENV='\"production\"' --progress --profile --colors",
+      "command": "npm run clean && webpack -p --config build --define process.env.NODE_ENV='\"production\"' --progress --profile --colors",
       "env": {
         "NODE_ENV": "production"
       }
