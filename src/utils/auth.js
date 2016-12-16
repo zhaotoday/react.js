@@ -1,38 +1,41 @@
-/*
- 设置 token
- */
-const setToken = () => {
-}
+import storage from './storage'
 
-/*
- 获取 token
- */
-const getToken = () => {
-}
+const TOKEN = 'TOKEN'
+const USER = 'USER'
 
-/*
- 是否已登陆
- */
-const isLogin = () => {
-  return true
-}
-
-/*
- 登陆
- */
-const login = () => {
-}
-
-/*
- 登出
- */
-const logout = () => {
-}
+let token = null
+let user = null
 
 export default {
-  setToken,
-  getToken,
-  isLogin,
-  login,
-  logout
+  /**
+   * 是否登录
+   */
+  isLogin () {
+    return !!this.getToken()
+  },
+
+  /**
+   * 设置 token
+   * @param value
+   */
+  setToken (value) {
+    token = value
+    storage.set(TOKEN, token)
+  },
+
+  /**
+   * 获取 token
+   */
+  getToken () {
+    return token || storage.get(TOKEN)
+  },
+
+  /**
+   * 销毁 token 和 user
+   */
+  destroy () {
+    token = user = null
+    storage.remove(TOKEN)
+    storage.remove(USER)
+  }
 }
