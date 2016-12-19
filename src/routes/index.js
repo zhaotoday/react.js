@@ -1,4 +1,4 @@
-import { auth } from 'utils'
+import auth from 'utils/auth'
 
 module.exports = {
   component: 'div',

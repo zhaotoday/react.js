@@ -1,4 +1,4 @@
-import storage from './storage'
+import storage from './helpers/storage'
 
 const TOKEN = 'TOKEN'
 const USER = 'USER'
