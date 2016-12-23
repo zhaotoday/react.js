@@ -38,13 +38,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: [
-          ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: ['css-loader']
-          })
-        ]
+        include: [
+          path.resolve('node_modules')
+        ],
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader',
+          publicPath: '../'
+        })
       },
       ...config.module.rules
     ]
@@ -60,7 +61,11 @@ module.exports = {
       },
       sourceMap: false
     }),
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      disable: false,
+      allChunks: false
+    }),
     ...config.plugins
   ],
   resolve: config.resolve
