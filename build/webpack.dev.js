@@ -49,6 +49,15 @@ module.exports = {
           'css-loader'
         ]
       },
+      {
+        test: /\.less/,
+        include: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
+        ]
+      },
       ...config.module.rules
     ]
   },

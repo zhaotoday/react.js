@@ -47,6 +47,17 @@ module.exports = {
           publicPath: '../'
         })
       },
+      {
+        test: /\.less/,
+        include: [
+          path.resolve('node_modules')
+        ],
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!less-loader',
+          publicPath: '../'
+        })
+      },
       ...config.module.rules
     ]
   },
