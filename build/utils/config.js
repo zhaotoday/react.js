@@ -77,7 +77,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: consts.TEMPLATE,
       title: consts.TITLE,
-      filename: './index.html',
+      filename: (consts.ENV === 'prod' ? '../' : '') + 'index.html',
       hash: true
     })
   ],
