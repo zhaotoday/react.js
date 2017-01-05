@@ -23,25 +23,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        include: [
-          path.resolve('src/app'),
-          path.resolve('src/components')
-        ],
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]-[hash:base64:5]'
-            }
-          },
-          'sass-loader',
-          'postcss-loader'
-        ]
-      },
-      {
         test: /\.css$/,
         include: /node_modules/,
         use: [

@@ -5,6 +5,7 @@ const ENTRY = 'src/entry.js'
 const TEMPLATE = 'src/template/index.html'
 const TITLE = 'react webapp'
 const CDN = '/dist/'
+const ENV = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
 
 module.exports = {
   PORT,
@@ -13,5 +14,6 @@ module.exports = {
   ENTRY,
   TEMPLATE,
   TITLE,
-  CDN
+  CDN,
+  ENV
 }

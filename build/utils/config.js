@@ -12,7 +12,14 @@ const config = {
       {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
+            }
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -39,7 +46,11 @@ const config = {
       },
       {
         test: /\.scss$/,
-        include: [path.resolve('src/themes')],
+        include: [
+          path.resolve('src/themes'),
+          path.resolve('src/app'),
+          path.resolve('src/components')
+        ],
         use: [
           'style-loader',
           'css-loader',
@@ -57,6 +68,9 @@ const config = {
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
+          require('postcss-modules')({
+            generateScopedName: '[name]__[local]___[hash:base64:5]',
+          }),
           require('postcss-font-magician')(),
           require('cssnano')({
             filterPlugins: false,
@@ -77,7 +91,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: consts.TEMPLATE,
       title: consts.TITLE,
-      filename: '../index.html',
+      filename: (consts.ENV === 'prod' ? '.' : '') + './index.html',
       hash: true
     })
   ],

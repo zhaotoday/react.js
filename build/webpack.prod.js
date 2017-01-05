@@ -18,25 +18,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        include: [
-          path.resolve('src/app'),
-          path.resolve('src/components')
-        ],
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[hash:base64:5]'
-            }
-          },
-          'sass-loader',
-          'postcss-loader'
-        ]
-      },
-      {
         test: /\.css$/,
         include: [
           path.resolve('node_modules')
@@ -67,8 +48,13 @@ module.exports = {
       filename: 'vendor.bundle.js'
     }),
     new UglifyJsPlugin({
+      beautify: false,
+      comments: false,
       compress: {
-        warnings: false
+        warnings: false,
+        drop_console: true,
+        collapse_vars: true,
+        reduce_vars: true
       },
       sourceMap: false
     }),
