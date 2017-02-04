@@ -71,3 +71,12 @@ npm run build
   └ i18n            [panel 的国际化]
   
 ```
+### 7. redux action type 常量规范
+和 RESTful 的规范相对应，下以文章（article）模型为例。
+```
+GET_ARTICLES        [获取文章列表]
+GET_ARTICLE         [获取文章详情]
+POST_ARTICLE        [新增文章]
+PUT_ARTICLE         [修改文章]
+DELETE_ARTICLE      [删除一篇或多篇文章]
+```
