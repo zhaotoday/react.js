@@ -43,4 +43,4 @@ class Comp extends React.Component {
   }
 }
 
-module.exports = Comp
+export default Comp

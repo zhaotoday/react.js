@@ -1,4 +1,4 @@
-const config = require('./utils/config')
+const config = require('./utils/base.config')
 const consts = require('./utils/consts')
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
@@ -17,25 +17,6 @@ module.exports = {
   performance: config.performance,
   module: {
     rules: [
-      {
-        test: /\.scss$/,
-        include: [
-          path.resolve('src/app'),
-          path.resolve('src/components')
-        ],
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[hash:base64:5]'
-            }
-          },
-          'sass-loader',
-          'postcss-loader'
-        ]
-      },
       {
         test: /\.css$/,
         include: [
@@ -67,8 +48,13 @@ module.exports = {
       filename: 'vendor.bundle.js'
     }),
     new UglifyJsPlugin({
+      beautify: false,
+      comments: false,
       compress: {
-        warnings: false
+        warnings: false,
+        drop_console: true,
+        collapse_vars: true,
+        reduce_vars: true
       },
       sourceMap: false
     }),

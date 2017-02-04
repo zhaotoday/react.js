@@ -1,10 +1,10 @@
 import auth from 'utils/auth'
 
-module.exports = {
+export default {
   component: 'div',
   childRoutes: [{
     path: '/',
-    component: require('app'),
+    component: require('app').default,
     onEnter(nextState, replace) {
       if (!auth.isLogin()) {
         replace({
@@ -18,20 +18,20 @@ module.exports = {
     getIndexRoute(location, callback) {
       require.ensure([], function (require) {
         callback(null, {
-          component: require('app/dashboard')
+          component: require('app/dashboard').default
         })
       })
     },
     getChildRoutes(location, cb) {
       require.ensure([], (require) => {
         cb(null, [
-          require('./article')
+          require('./article').default
         ])
       })
     }
   }, {
     path: 'login',
-    component: require('app/login'),
+    component: require('app/login').default,
     onEnter(nextState, replace) {
       if (auth.isLogin()) {
         replace('/')
