@@ -3,7 +3,7 @@
 
 ## 目录结构
 ```
-- build             [webpack调试与构建]
+- build             [webpack 调试与构建]
 - src               [源码]
   └ app             [业务]
   └ components      [通用组件]
