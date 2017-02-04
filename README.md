@@ -68,11 +68,10 @@ npm run build
     └ images        [panel 的图片]
   └ components      [panel 的子组件]
   └ utils           [panel 的相关工具集合]
-  └ i18n            [panel 的国际化]
-  
+  └ i18n            [panel 的国际化]  
 ```
 ### 7. redux action type 常量规范
-和 RESTful 的规范相对应，下以文章（article）模型为例。
+和 RESTful 的规范相对应，下面以文章（article）模型为例。
 ```
 GET_ARTICLES        [获取文章列表]
 GET_ARTICLE         [获取文章详情]
