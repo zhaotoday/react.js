@@ -26,7 +26,7 @@ npm run eslint
 npm run build
 ```
 
-## 目录结构
+## 4. 目录结构
 ```
 - build             [webpack 调试与构建]
 - src               [源码]
@@ -41,4 +41,16 @@ npm run build
   └ entry.js        [入口文件]
 - dist              [构建代码]
 - test              [单元测试]
+```
+
+## 5. 业务模块规范
+业务模块代码放在：src/app 文件夹下，下面以登录模块为例。
+
+```
+- login             [登录业务模块]
+  └ index.js        [业务入口文件]
+  └ theme           [皮肤/主题]
+    └ styles        [样式]
+      └ index.scss
+    └ images        [图片]
 ```
