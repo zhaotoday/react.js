@@ -1,12 +1,12 @@
 ## 小贴士
 - 本项目 webpack 已升级至 webpack 2。
-- 本项目为了减少代码体积，用 react-lite 代替 react。你也可以直接用 react，请注释配置[连接](https://github.com/zhaotoday/react/blob/master/build/utils/base.config.js#L106)。
+- 本项目为了减少代码体积，用 react-lite 代替 react js。您也可以直接使用 react js，请注释[这段配置](https://github.com/zhaotoday/react/blob/master/build/utils/base.config.js#L106)。
 - 本项目还在优化中，但已经可以用于生产环境。
 - 如果您有好的意见或建议，请 issue。
 - 如果您觉得本项目对您有帮助，请给个 star，^_^。
 
 ## 一、介绍
-基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、代码规范校验、单元测试、国际化等。
+基于 reactjs+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、代码规范校验、单元测试、国际化等。
 
 ## 二、技术栈
 react js、redux、es6、webpack 2、sass、postcss、css modules。
