@@ -1,25 +1,33 @@
-## 贴士
+## 1. 贴士
 webpack 已升级至 2 版本，升级过程中踩了比较多的坑，下面会做简单分享。
 
-## 介绍
+## 2. 介绍
 基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、单元测试、国际化等。
 
-## 使用
-### 下载源码
+## 3. 使用
+### 3.1. 下载源码
 ```
 git clone https://github.com/zhaotoday/react.git
 ```
-### 安装 npm 依赖包
+### 3.2. 安装 npm 依赖包
 ```
 npm install
 ```
-### 启动项目
+### 3.3. 启动项目
 ```
 npm start
 ```
-### 构建代码
+### 3.4. 构建代码
 ```
 npm run build
+```
+### 3.5. js 代码规范校验
+```
+npm run eslint
+```
+### 3.6 css 代码规范校验
+```
+npm run stylelint
 ```
 
 ## 目录结构
