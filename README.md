@@ -48,7 +48,7 @@ npm run build
 
 ```
 - login             [login 模块]
-  └ index.js        [login 入口文件]
+  └ index.js        [login 的入口文件]
   └ theme           [login 的皮肤]
     └ styles        [login 的样式]
       └ index.scss
