@@ -8,7 +8,7 @@
 基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、代码规范校验、单元测试、国际化等。
 
 ## 二、技术栈
-react js、redux、es6、webpack、sass、postcss、css modules。
+react js、redux、es6、webpack 2、sass、postcss、css modules。
 
 ## 三、使用
 #### 1. 下载源码
