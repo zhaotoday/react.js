@@ -27,6 +27,7 @@ npm run build
 ```
 
 ## 目录结构
+```
 - build             [webpack 调试与构建]
 - src               [源码]
   └ app             [业务代码]
@@ -40,4 +41,4 @@ npm run build
   └ entry.js        [入口文件]
 - dist              [构建代码]
 - test              [单元测试]
-
+```
