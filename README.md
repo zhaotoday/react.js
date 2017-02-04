@@ -1,36 +1,37 @@
-## 1. 贴士
-webpack 已升级至 webpack 2。
+## 贴士
+- webpack 已升级至 webpack 2。
+- 本项目还在优化中，但已经投入生产。
 
-## 2. 介绍
+## 一、介绍
 基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、单元测试、国际化等。
 
-## 3. 使用
-#### 3.1. 下载源码
+## 二、使用
+#### 1. 下载源码
 ```
 git clone https://github.com/zhaotoday/react.git
 ```
-#### 3.2. 安装 npm 依赖包
+#### 2. 安装 npm 依赖包
 ```
 npm install
 ```
-#### 3.3. 启动项目
+#### 3. 启动项目
 ```
 npm start
 ```
-#### 3.4. JS 代码规范校验
+#### 4. JS 代码规范校验
 ```
 npm run eslint
 ```
-#### 3.5. 单元测试
+#### 5. 单元测试
 ```
 npm run test
 ```
-#### 3.6. 构建代码
+#### 6. 构建代码
 ```
 npm run build
 ```
 
-## 4. 目录结构
+## 三、目录结构
 ```
 - build             [webpack 调试与构建]
 - src               [源码]
@@ -47,7 +48,7 @@ npm run build
 - test              [单元测试]
 ```
 
-## 5. 业务模块规范
+## 四、业务模块规范
 业务模块代码放在：src/app 文件夹下，下面以登录（login）模块为例。
 
 ```
@@ -61,7 +62,7 @@ npm run build
   └ utils           [login 的相关工具集合]
   └ i18n            [login 的国际化]
 ```
-## 6. 通用组件规范
+## 五、通用组件规范
 通用组件放在：src/components 文件夹下，规范和业务模块基本一致，下面以面板（panel）组件为例。
 ```
 - panel             [panel 组件]
@@ -74,7 +75,7 @@ npm run build
   └ utils           [panel 的相关工具集合]
   └ i18n            [panel 的国际化]  
 ```
-### 7. redux action type 常量规范
+### 六、redux action type 常量规范
 和 RESTful 的规范相对应，下面以文章（article）模型为例。
 ```
 GET_ARTICLES        [获取文章列表]
