@@ -17,17 +17,13 @@ npm install
 ```
 npm start
 ```
-### 3.4. 构建代码
-```
-npm run build
-```
-### 3.5. js 代码规范校验
+### 3.4. JS 代码规范校验
 ```
 npm run eslint
 ```
-### 3.6 css 代码规范校验
+### 3.5. 构建代码
 ```
-npm run stylelint
+npm run build
 ```
 
 ## 目录结构
