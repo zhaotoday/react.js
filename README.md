@@ -1,3 +1,6 @@
+## 贴士
+webpack 已升级至 2 版本，升级过程中踩了比较多的坑。
+
 ## 介绍
 基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、单元测试、国际化等。
 
@@ -20,7 +23,6 @@ npm run build
 ```
 
 ## 目录结构
-```
 - build             [webpack 调试与构建]
 - src               [源码]
   └ app             [业务代码]
@@ -34,4 +36,4 @@ npm run build
   └ entry.js        [入口文件]
 - dist              [构建代码]
 - test              [单元测试]
-```
+
