@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new OpenBrowserPlugin({
       url: `http://localhost:${consts.PORT}`
     }),
