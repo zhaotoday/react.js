@@ -1,5 +1,5 @@
 const consts = require('./utils/consts')
-const config = require('./utils/config')
+const config = require('./utils/base.config')
 const webpack = require('webpack')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 const path = require('path')
