@@ -53,18 +53,19 @@ npm run build
     └ styles        [login 的样式]
       └ index.scss
     └ images        [login 的图片]
-    └ components    [login 的相关组件]
-    └ utils         [login 的相关工具集合]
+  └ components      [login 的相关组件]
+  └ utils           [login 的相关工具集合]
 ```
 ## 6. 通用组件规范
-通用组件放在：src/components 文件夹下，下面以面板（panel）组件为例。
+通用组件放在：src/components 文件夹下，规范和业务模块基本一致，下面以面板（panel）组件为例。
 ```
 - panel             [panel 组件]
   └ index.js        [panel 的入口文件]
-  └ components      [panel 的子组件]
   └ theme           [panel 的皮肤]
     └ styles        [panel 的样式]
       └ index.scss
     └ images        [panel 的图片]
+  └ components      [panel 的子组件]
+  └ utils           [panel 的相关工具集合]
   
 ```
