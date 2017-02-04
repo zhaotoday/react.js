@@ -9,19 +9,23 @@ webpack 已升级至 webpack 2。
 ```
 git clone https://github.com/zhaotoday/react.git
 ```
-### 3.2. 安装 npm 依赖包
+#### 3.2. 安装 npm 依赖包
 ```
 npm install
 ```
-### 3.3. 启动项目
+#### 3.3. 启动项目
 ```
 npm start
 ```
-### 3.4. JS 代码规范校验
+#### 3.4. JS 代码规范校验
 ```
 npm run eslint
 ```
-### 3.5. 构建代码
+#### 3.5. 单元测试
+```
+npm run test
+```
+#### 3.6. 构建代码
 ```
 npm run build
 ```
