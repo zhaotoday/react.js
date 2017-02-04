@@ -53,7 +53,14 @@ const config = {
         ],
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
           'sass-loader',
           'postcss-loader'
         ]
@@ -67,10 +74,8 @@ const config = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
+        context: __dirname,
         postcss: [
-          require('postcss-modules')({
-            generateScopedName: '[name]__[local]___[hash:base64:5]',
-          }),
           require('postcss-font-magician')(),
           require('cssnano')({
             filterPlugins: false,
