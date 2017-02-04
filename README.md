@@ -7,7 +7,10 @@
 ## 一、介绍
 基于 react+redux+webpack2 的单页应用项目模板，功能包括：调试、构建、代码规范校验、单元测试、国际化等。
 
-## 二、使用
+## 二、技术栈
+react js、redux、es6、webpack、sass、postcss、css modules。
+
+## 三、使用
 #### 1. 下载源码
 ```
 git clone https://github.com/zhaotoday/react.git
@@ -33,7 +36,7 @@ npm run test
 npm run build
 ```
 
-## 三、目录结构
+## 四、目录结构
 ```
 - build             [webpack 调试与构建]
 - src               [源码]
@@ -50,7 +53,7 @@ npm run build
 - test              [单元测试]
 ```
 
-## 四、业务模块规范
+## 五、业务模块规范
 业务模块代码放在：src/app 文件夹下，下面以登录（login）模块为例。
 
 ```
@@ -64,7 +67,7 @@ npm run build
   └ utils           [login 的相关工具集合]
   └ i18n            [login 的国际化]
 ```
-## 五、通用组件规范
+## 六、通用组件规范
 通用组件放在：src/components 文件夹下，规范和业务模块基本一致，下面以面板（panel）组件为例。
 ```
 - panel             [panel 组件]
@@ -77,7 +80,7 @@ npm run build
   └ utils           [panel 的相关工具集合]
   └ i18n            [panel 的国际化]  
 ```
-### 六、redux action type 常量规范
+### 七、redux action type 常量规范
 和 RESTful 的规范相对应，下面以文章（article）模型为例。
 ```
 GET_ARTICLES        [获取文章列表]
