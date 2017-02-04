@@ -1,6 +1,6 @@
 ## 小贴士
 - 本项目 webpack 已升级至 webpack 2。
-- 本项目为了减少代码体积，用 react-lite 代替 react js。您也可以直接使用 react js，请注释[这段配置](https://github.com/zhaotoday/react/blob/master/build/utils/base.config.js#L106)。
+- 本项目为了减少代码体积，用了 react-lite 代替 react js。您也可以直接使用 react js，请注释[这段配置](https://github.com/zhaotoday/react/blob/master/build/utils/base.config.js#L106)。
 - 本项目还在优化中，但已经可以用于生产环境。
 - 如果您有好的意见或建议，请 issue。
 - 如果您觉得本项目对您有帮助，请给个 star，^_^。
