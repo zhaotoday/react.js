@@ -88,6 +88,6 @@ GET_ARTICLES        [获取文章列表]
 GET_ARTICLE         [获取文章详情]
 POST_ARTICLE        [新增文章]
 PUT_ARTICLE         [修改文章]
-DELETE_ARTICLE      [删除一篇或多篇文章]
+DELETE_ARTICLES     [删除一篇或多篇文章]
 ```
 ## 未完待续...
