@@ -3,7 +3,6 @@ import actionCreators from '../redux/actions'
 import connect from 'react-redux/lib/connect/connect'
 
 import { Head, Body, Sidebar, Main } from 'app/layout'
-import 'themes/global'
 
 @connect(
   state => ({
