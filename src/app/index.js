@@ -1,8 +1,10 @@
 import React from 'react'
 import actionCreators from '../redux/actions'
 import connect from 'react-redux/lib/connect/connect'
-
+import init from 'utils/init'
 import { Head, Body, Sidebar, Main } from 'app/layout'
+
+init()
 
 @connect(
   state => ({
