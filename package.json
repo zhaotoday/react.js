@@ -89,6 +89,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "core-js": "^2.4.1",
     "fbjs": "^0.8.8",
     "history": "^4.5.0",
     "i18next": "^4.1.4",
