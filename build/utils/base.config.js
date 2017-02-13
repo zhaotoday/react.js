@@ -46,8 +46,17 @@ const config = {
       },
       {
         test: /\.scss$/,
+        include: [path.resolve('src/themes')],
+        use:[
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
         include: [
-          path.resolve('src/themes'),
           path.resolve('src/app'),
           path.resolve('src/components')
         ],
