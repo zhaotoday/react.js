@@ -61,7 +61,12 @@ const config = {
               localIdentName: '[local]___[hash:base64:5]'
             }
           },
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve('src/themes')]
+            }
+          },
           'postcss-loader'
         ]
       },
