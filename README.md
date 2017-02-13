@@ -50,6 +50,8 @@ npm run build
   └ themes          [主题]
     └ default       [默认主题]
       └ global      [全局样式]
+        └ classes   [全局样式类]
+        └ reset     [样式重置]
       └ utils       [工具]
   └ utils           [工具集合]
   └ entry.js        [入口文件]
