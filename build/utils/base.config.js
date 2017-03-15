@@ -97,7 +97,7 @@ const config = {
             autoprefixer: {
               add: true,
               remove: true,
-              browsers: ['last 2 versions']
+              browserslist: ['last 2 versions']
             },
             safe: true,
             discardComments: {
