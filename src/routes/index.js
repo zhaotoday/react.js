@@ -1,7 +1,6 @@
 import auth from 'utils/auth'
 
 export default {
-  component: 'div',
   childRoutes: [{
     path: '/',
     component: require('app').default,
