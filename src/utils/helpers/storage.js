@@ -2,32 +2,32 @@ const localStorage = window.localStorage
 
 export default {
   /**
-   * 设置存储
-   * @param key {string} 键值
-   * @data data {object} 数据
+   * 设置
+   * @param {string} key 键
+   * @data {object} value 值
    */
-  set(key, data) {
-    localStorage.setItem(key, JSON.stringify(data))
+  set(key, value) {
+    localStorage.setItem(key, JSON.stringify(value))
   },
 
   /**
-   * 获取存储
-   * @param key {string} 键值
+   * 获取
+   * @param {string} key 键
    */
   get(key) {
     return JSON.parse(localStorage.getItem(key)) || {}
   },
 
   /**
-   * 移除存储
-   * @param key {string} 键值
+   * 移除
+   * @param {string} key 键
    */
   remove(key) {
     localStorage.removeItem(key)
   },
 
   /**
-   * 清空存储
+   * 清空
    */
   clear() {
     localStorage.clear()
