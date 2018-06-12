@@ -10,7 +10,7 @@ export default {
    * @param dateTime {string} 时间
    * @param formatter {string} 格式
    */
-  format(dateTime, formatter) {
+  format (dateTime, formatter) {
     if (!dateTime) return ''
     return dateTime.date(formatter)
   },
@@ -19,7 +19,7 @@ export default {
    * 获取：年-月-日 时:分:秒
    * @param dateTime {string} 时间
    */
-  getDateTime(dateTime) {
+  getDateTime (dateTime) {
     return this.format(dateTime, DATE_TIME_FORMATTER)
   },
 
@@ -27,7 +27,7 @@ export default {
    * 获取：年-月-日
    * @param dateTime {string} 时间
    */
-  getDate(dateTime) {
+  getDate (dateTime) {
     return this.format(dateTime, DATE_FORMATTER)
   },
 
@@ -35,7 +35,7 @@ export default {
    * 获取：时:分:秒
    * @param dateTime {string} 时间
    */
-  getTime(dateTime) {
+  getTime (dateTime) {
     return this.format(dateTime, TIME_FORMATTER)
   }
 }

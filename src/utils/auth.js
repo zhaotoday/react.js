@@ -10,7 +10,7 @@ export default {
   /**
    * 是否登录
    */
-  isLogin() {
+  isLogin () {
     return !!this.getToken()
   },
 
@@ -18,7 +18,7 @@ export default {
    * 设置 token
    * @param value
    */
-  setToken(value) {
+  setToken (value) {
     token = value
     storage.set(TOKEN, token)
   },
@@ -26,14 +26,14 @@ export default {
   /**
    * 获取 token
    */
-  getToken() {
+  getToken () {
     return token || storage.get(TOKEN)
   },
 
   /**
    * 销毁 token 和 user
    */
-  destroy() {
+  destroy () {
     token = user = null
     storage.remove(TOKEN)
     storage.remove(USER)

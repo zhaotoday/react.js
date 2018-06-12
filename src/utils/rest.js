@@ -12,7 +12,7 @@ export default class REST {
   /**
    * 构造函数
    */
-  constructor() {
+  constructor () {
     // 接口基础地址
     this.baseURL = ''
     // 接口版本
@@ -29,7 +29,7 @@ export default class REST {
    * @param {object} options - 选项
    * @return {object}
    */
-  _request(method = 'GET', options = {}) {
+  _request (method = 'GET', options = {}) {
     let url = this.version ? `/${this.version}/${this.path}` : `/${this.path}`
     const headers = Object.keys(this.headers) ? {headers: this.headers} : {}
 
@@ -52,7 +52,7 @@ export default class REST {
    * @param {object} obj - 待转化对象
    * @return {string}
    */
-  _objToUrl(obj) {
+  _objToUrl (obj) {
     if (!obj || !Object.keys(obj).length) {
       return ''
     }
@@ -66,7 +66,7 @@ export default class REST {
    * 附加路劲
    * @param {string} path - 路劲
    */
-  addPath(path = '') {
+  addPath (path = '') {
     this.path = this.path + '/' + path
 
     return this
@@ -76,7 +76,7 @@ export default class REST {
    * 添加 headers
    * @param {object} headers - headers
    */
-  addHeaders(headers) {
+  addHeaders (headers) {
     this.headers = {
       ...this.headers,
       ...headers
@@ -89,7 +89,7 @@ export default class REST {
    * path 参数替换
    * @param {object} options - path 参数列表
    */
-  replace(options = {}) {
+  replace (options = {}) {
     Object.keys(options).forEach((key) => {
       this.path = this.path.replace(new RegExp('{' + key + '}', 'img'), options[key])
     })
@@ -102,7 +102,7 @@ export default class REST {
    * @param {object} options - 选项
    * @returns {object}
    */
-  GET(options = {}) {
+  GET (options = {}) {
     return this._request('GET', options)
   }
 
@@ -111,7 +111,7 @@ export default class REST {
    * @param {object} options - 选项
    * @returns {object}
    */
-  DELETE(options = {}) {
+  DELETE (options = {}) {
     return this._request('DELETE', options)
   }
 
@@ -120,7 +120,7 @@ export default class REST {
    * @param {object} options - 选项
    * @returns {object}
    */
-  POST(options = {}) {
+  POST (options = {}) {
     return this._request('POST', options)
   }
 
@@ -129,7 +129,7 @@ export default class REST {
    * @param {object} options - 选项
    * @returns {object}
    */
-  PATCH(options = {}) {
+  PATCH (options = {}) {
     return this._request('PATCH', options)
   }
 }

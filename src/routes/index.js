@@ -5,7 +5,7 @@ export default {
   childRoutes: [{
     path: '/',
     component: require('app').default,
-    onEnter(nextState, replace) {
+    onEnter (nextState, replace) {
       if (!auth.isLogin()) {
         replace({
           pathname: '/login',
@@ -15,14 +15,14 @@ export default {
         })
       }
     },
-    getIndexRoute(location, callback) {
+    getIndexRoute (location, callback) {
       require.ensure([], function (require) {
         callback(null, {
           component: require('app/dashboard').default
         })
       })
     },
-    getChildRoutes(location, cb) {
+    getChildRoutes (location, cb) {
       require.ensure([], (require) => {
         cb(null, [
           require('./article').default
@@ -32,7 +32,7 @@ export default {
   }, {
     path: 'login',
     component: require('app/login').default,
-    onEnter(nextState, replace) {
+    onEnter (nextState, replace) {
       if (auth.isLogin()) {
         replace('/')
       }

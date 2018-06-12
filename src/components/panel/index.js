@@ -4,7 +4,7 @@ import Head from './components/head'
 import Body from './components/body'
 
 const Comp = class extends React.Component {
-  render() {
+  render () {
     return <div className={styles.panel}>
       {this.props.children}
     </div>
