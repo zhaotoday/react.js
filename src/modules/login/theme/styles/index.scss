@@ -1,0 +1,17 @@
+@import "utils/index";
+
+.login {
+  @include position--absolute(40%, 0, null, 0);
+
+  transform: translateY(-50%);
+
+  .logo {
+    @include circle(100px);
+    @include block--center;
+
+    background: {
+      image: url("../images/logo.jpg");
+      size: 100% 100%;
+    }
+  }
+}
