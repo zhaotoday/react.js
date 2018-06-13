@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles/index.scss'
+import styles from './theme/styles/index.scss'
 
 export default class extends React.Component {
   render () {
