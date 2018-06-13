@@ -1,41 +1,45 @@
-import storage from './helpers/storage'
+import storage from 'jt-storage'
 
-const TOKEN = 'TOKEN'
-const USER = 'USER'
-
-let token = null
-let user = null
+const MANAGER = 'manager'
+const TOKEN = 'token'
 
 export default {
+  name: 'auth',
+
   /**
-   * 是否登录
+   * 获取 auth，返回：管理员信息和 token
+   * @return {Object}
    */
-  isLogin () {
-    return !!this.getToken()
+  get () {
+    return {
+      [MANAGER]: storage.get(MANAGER),
+      [TOKEN]: storage.get(TOKEN)
+    }
   },
 
   /**
-   * 设置 token
-   * @param value
+   * 登录
+   * @param {string} manager 登录管理员
+   * @param {string} token 登录 token
    */
-  setToken (value) {
-    token = value
-    storage.set(TOKEN, token)
+  login ({manager, token}) {
+    storage.set(MANAGER, manager)
+    storage.set(TOKEN, `Bearer ${token}`)
   },
 
   /**
-   * 获取 token
+   * 登出
    */
-  getToken () {
-    return token || storage.get(TOKEN)
-  },
-
-  /**
-   * 销毁 token 和 user
-   */
-  destroy () {
-    token = user = null
+  logout () {
+    storage.remove(MANAGER)
     storage.remove(TOKEN)
-    storage.remove(USER)
+  },
+
+  /**
+   * 是否已登录
+   * @return {boolean}
+   */
+  loggedIn () {
+    return !!storage.get(MANAGER) && !!storage.get(TOKEN)
   }
 }
