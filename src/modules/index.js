@@ -1,7 +1,7 @@
 import React from 'react'
 import init from 'utils/init'
 import PropTypes from 'prop-types'
-import { Head, Body, Sidebar, Main } from 'modules/layout'
+import { CHead, CBody, CSidebar, CMain } from 'components/layouts'
 
 init()
 
@@ -12,11 +12,11 @@ export default class extends React.Component {
 
   render () {
     return <div>
-      <Head />
-      <Body>
-        <Sidebar ref='sidebar' />
-        <Main>{ this.props.children }</Main>
-      </Body>
+      <CHead />
+      <CBody>
+        <CSidebar ref='sidebar' />
+        <CMain>{this.props.children}</CMain>
+      </CBody>
     </div>
   }
 }
