@@ -1,21 +1,21 @@
 export default {
-  path: 'article',
+  path: 'articles',
   getComponents (location, cb) {
     require.ensure([], (require) => {
-      cb(null, require('app/article').default)
+      cb(null, require('modules/articles').default)
     })
   },
   getIndexRoute (location, callback) {
     require.ensure([], function (require) {
       callback(null, {
-        component: require('app/article/list').default
+        component: require('modules/articles/list').default
       })
     })
   },
   getChildRoutes (location, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./add').default
+        require('./form').default
       ])
     })
   }

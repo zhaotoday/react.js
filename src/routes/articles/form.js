@@ -1,8 +1,8 @@
 export default {
-  path: 'add',
+  path: 'form',
   getComponent (location, cb) {
     require.ensure([], (require) => {
-      cb(null, require('app/article/add').default)
+      cb(null, require('modules/articles/form').default)
     })
   }
 }

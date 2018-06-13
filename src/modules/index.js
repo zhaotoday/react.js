@@ -1,7 +1,7 @@
 import React from 'react'
 import init from 'utils/init'
 import PropTypes from 'prop-types'
-import { Head, Body, Sidebar, Main } from 'app/layout'
+import { Head, Body, Sidebar, Main } from 'modules/layout'
 
 init()
 

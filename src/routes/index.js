@@ -4,7 +4,7 @@ export default {
   component: 'div',
   childRoutes: [{
     path: '/',
-    component: require('app').default,
+    component: require('modules').default,
     onEnter (nextState, replace) {
       if (!auth.isLogin()) {
         replace({
@@ -18,20 +18,20 @@ export default {
     getIndexRoute (location, callback) {
       require.ensure([], function (require) {
         callback(null, {
-          component: require('app/dashboard').default
+          component: require('modules/dashboard').default
         })
       })
     },
     getChildRoutes (location, cb) {
       require.ensure([], (require) => {
         cb(null, [
-          require('./article').default
+          require('./articles').default
         ])
       })
     }
   }, {
     path: 'login',
-    component: require('app/login').default,
+    component: require('modules/login').default,
     onEnter (nextState, replace) {
       if (auth.isLogin()) {
         replace('/')
