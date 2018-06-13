@@ -1,7 +1,5 @@
-import 'themes/global'
-import './polyfill'
+import 'styles/global'
+import './polyfills'
 
-const init = () => {
+export default () => {
 }
-
-export default init
