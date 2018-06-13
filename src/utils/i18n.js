@@ -10,7 +10,7 @@ export default class I18N {
    * 构造函数
    * @param lng {string} 默认语言
    */
-  constructor(lng) {
+  constructor (lng) {
     this.lng = lng || this.getBrowserLng()
     this.ns = 'translation'
   }
@@ -18,7 +18,7 @@ export default class I18N {
   /**
    * 初始化
    */
-  init() {
+  init () {
     i18next.init({
       debug: true,
       lng: this.lng,
@@ -51,7 +51,7 @@ export default class I18N {
   /**
    * 获取浏览器语言环境
    */
-  getBrowserLng() {
+  getBrowserLng () {
     return navigator.language || navigator.browserLanguage
   }
 
@@ -59,7 +59,7 @@ export default class I18N {
    * 切换到某种语言
    * @param lng {string} 语言
    */
-  switchTo(lng) {
+  switchTo (lng) {
     i18next.changeLanguage(lng)
     this.lng = lng
 
@@ -70,7 +70,7 @@ export default class I18N {
    * 获取翻译
    * @param ns {string} 业务模块
    */
-  getT(ns) {
+  getT (ns) {
     return i18next.getFixedT(this.lng, ns || this.ns)
   }
 }

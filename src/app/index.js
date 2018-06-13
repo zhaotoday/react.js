@@ -16,7 +16,7 @@ init()
   })
 )
 class Comp extends React.Component {
-  componentDidMount() {
+  componentDidMount () {
     this.props.getArticles({
       params: {
         title: 'the title'
@@ -31,11 +31,11 @@ class Comp extends React.Component {
     })
   }
 
-  render() {
+  render () {
     return <div>
       <Head />
       <Body>
-        <Sidebar ref="sidebar" />
+        <Sidebar ref='sidebar' />
         <Main>
           {this.props.children}
         </Main>
