@@ -26,14 +26,14 @@ export default class extends React.Component {
 
   componentDidMount () {
     this.props.getArticles({
-      params: {
+      query: {
         title: 'the title'
       }
     })
 
     this.props.postArticleAuthor({
       article_id: 123,
-      data: {
+      body: {
         title: 'the title'
       }
     })
