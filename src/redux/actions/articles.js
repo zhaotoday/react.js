@@ -2,9 +2,7 @@ import actionTypes from '../consts/articles'
 import Model from '../models/articles'
 import createAction from 'redux-actions/lib/createAction'
 
-/**
- * 获取文章列表
- */
+// 获取文章列表
 export const getArticles = createAction(
   actionTypes.GET_ARTICLES,
   (options) => {
@@ -15,9 +13,7 @@ export const getArticles = createAction(
   }
 )
 
-/**
- * 给文章新增一个作者
- */
+// 给文章新增一个作者
 export const postArticleAuthor = createAction(
   actionTypes.POST_ARTICLE_AUTHOR,
   (options) => {
