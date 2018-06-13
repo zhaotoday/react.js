@@ -6,7 +6,7 @@ export default {
     path: '/',
     component: require('modules').default,
     onEnter (nextState, replace) {
-      if (!auth.isLogin()) {
+      if (!auth.loggedIn()) {
         replace({
           pathname: '/login',
           state: {
@@ -18,7 +18,7 @@ export default {
     getIndexRoute (location, callback) {
       require.ensure([], function (require) {
         callback(null, {
-          component: require('modules/dashboard').default
+          component: require('modules/home').default
         })
       })
     },
@@ -33,7 +33,7 @@ export default {
     path: 'login',
     component: require('modules/login').default,
     onEnter (nextState, replace) {
-      if (auth.isLogin()) {
+      if (auth.loggedIn()) {
         replace('/')
       }
     }

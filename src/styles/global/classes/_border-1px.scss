@@ -1,7 +1,7 @@
 .border-1px {
   position: relative;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -16,7 +16,7 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min-device-pixel-ratio: 2.0) {
-  .border-1px:after {
+  .border-1px::after {
     width: 200%;
     height: 200%;
     -webkit-transform: scale(0.5);
@@ -25,7 +25,7 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-device-pixel-ratio: 2.5) {
-  .border-1px:after {
+  .border-1px::after {
     width: 300%;
     height: 300%;
     -webkit-transform: scale(0.33333334);
