@@ -6,5 +6,17 @@ export default {
    */
   isEmpty (value) {
     return value === null || value === undefined || value.trim() === ''
+  },
+
+  getImage ({ path = '' }) {
+    const cdn = 'http://localhost:88'
+
+    return `${cdn}/${path}`
+  },
+
+  getIcon ({ path = '' }) {
+    const cdn = 'http://localhost:88'
+
+    return `${cdn}/icons/${path}`
   }
 }

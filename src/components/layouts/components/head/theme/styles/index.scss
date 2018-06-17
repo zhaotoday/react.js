@@ -1,5 +1,5 @@
 @import "utils/index";
 
 .head {
-  @include position--absolute(0, 0, null, 0);
+  @include header--sticky;
 }
