@@ -46,8 +46,8 @@ const config = {
       },
       {
         test: /\.scss$/,
-        include: [path.resolve('src/themes')],
-        use:[
+        include: [path.resolve('src/styles')],
+        use: [
           'style-loader',
           'css-loader',
           'sass-loader',
@@ -57,7 +57,7 @@ const config = {
       {
         test: /\.scss$/,
         include: [
-          path.resolve('src/app'),
+          path.resolve('src/modules'),
           path.resolve('src/components')
         ],
         use: [
@@ -73,7 +73,7 @@ const config = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [path.resolve('src/themes')]
+              includePaths: [path.resolve('src/styles')]
             }
           },
           'postcss-loader'
