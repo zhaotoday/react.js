@@ -1,0 +1,5 @@
+@import "utils/index";
+
+.foot {
+  @include footer--sticky;
+}

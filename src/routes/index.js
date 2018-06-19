@@ -1,4 +1,4 @@
-import auth from 'utils/auth'
+// import auth from 'utils/auth'
 
 export default {
   component: 'div',
@@ -6,6 +6,7 @@ export default {
     path: '/',
     component: require('modules').default,
     onEnter (nextState, replace) {
+      /*
       if (!auth.loggedIn()) {
         replace({
           pathname: '/login',
@@ -14,6 +15,7 @@ export default {
           }
         })
       }
+      */
     },
     getIndexRoute (location, callback) {
       require.ensure([], function (require) {
@@ -25,7 +27,8 @@ export default {
     getChildRoutes (location, cb) {
       require.ensure([], (require) => {
         cb(null, [
-          require('./articles').default
+          require('./articles').default,
+          require('./medicines').default
         ])
       })
     }
@@ -33,9 +36,14 @@ export default {
     path: 'login',
     component: require('modules/login').default,
     onEnter (nextState, replace) {
+      /*
       if (auth.loggedIn()) {
         replace('/')
       }
+      */
     }
+  }, {
+    path: 'password',
+    component: require('modules/password').default
   }]
 }

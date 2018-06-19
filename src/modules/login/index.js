@@ -7,6 +7,8 @@ export default class extends React.Component {
     return <div className={styles.login}>
       <div className={styles.logo} />
       <WhiteSpace size='xl' />
+      <div className={styles.slogan}>这里放孝哈哈的标语</div>
+      <WhiteSpace size='xl' />
       <List>
         <InputItem type='phone' defaultValue='' placeholder='请输入手机号' clear>账号</InputItem>
         <InputItem type='password' defaultValue='' placeholder='请输入密码' clear>密码</InputItem>
