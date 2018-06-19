@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './theme/styles/index.scss'
 import { Button, WingBlank, WhiteSpace, List, InputItem } from 'antd-mobile'
+import styles from './theme/styles/index.scss'
 
 export default class extends React.Component {
   render () {

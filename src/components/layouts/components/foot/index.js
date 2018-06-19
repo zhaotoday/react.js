@@ -1,7 +1,6 @@
 import React from 'react'
 import { TabBar, Modal } from 'antd-mobile'
 import helpers from 'utils/helpers/base'
-
 import styles from './theme/styles/index.scss'
 
 const renderIcon = name => {
@@ -9,15 +8,13 @@ const renderIcon = name => {
     width: '22px',
     height: '22px',
     background: `url(${helpers.getIcon({ path: `${name}.svg` })}) center center /  21px 21px no-repeat`
-  }}
-  />
+  }} />
 }
 
 export default class extends React.Component {
   state = {
     selectedTab: 'storehouse',
-    hidden: false,
-    fullScreen: false
+    hidden: false
   }
 
   render () {
@@ -26,8 +23,7 @@ export default class extends React.Component {
         unselectedTintColor='#949494'
         tintColor='#33A3F4'
         barTintColor='white'
-        hidden={this.state.hidden}
-      >
+        hidden={this.state.hidden}>
         <TabBar.Item
           title='仓库'
           key='storehouse'

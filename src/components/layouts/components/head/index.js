@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavBar, Icon } from 'antd-mobile'
-import styles from './theme/styles/index.scss'
 import helpers from 'utils/helpers/base'
 import PropTypes from 'prop-types'
+import styles from './theme/styles/index.scss'
 
 export default class extends React.Component {
   static propTypes = {
